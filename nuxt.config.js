@@ -35,7 +35,15 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    [
+      '@nuxtjs/google-tag-manager',
+      {
+        id: 'GTM-5NX8FWG',
+        pageTracking: true,
+        dev: false
+      }
+    ]
   ],
   /*
    ** Axios module configuration

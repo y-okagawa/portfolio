@@ -1231,6 +1231,10 @@
   dependencies:
     eslint-loader "^2.1.2"
 
+"@nuxtjs/google-tag-manager@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-tag-manager/-/google-tag-manager-2.2.0.tgz#ee2c78aedebcf4e0c2a42e3a53fa38023d03d1ab"
+
 "@nuxtjs/icon@^2.6.0":
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/icon/-/icon-2.6.0.tgz#65295ee059794f01e41a52c4141c06e898e798bc"
