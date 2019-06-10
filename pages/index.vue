@@ -1,67 +1,160 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        portfolio
-      </h1>
-      <h2 class="subtitle">
-        okagaway portfolio
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green"
-          >Documentation</a
-        >
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-          >GitHub</a
-        >
+    <!-- Header -->
+    <header id="header">
+      <div class="inner">
+        <a href="#" class="image avatar"
+          ><img src="~/assets/images/avatar.png" alt=""
+        /></a>
+        <h1>
+          <strong>I am Yuya Okagawa</strong><br />
+          , I work as an Web Development Engineer.
+        </h1>
       </div>
+    </header>
+
+    <!-- Main -->
+    <div id="main">
+      <!-- One -->
+      <section id="one">
+        <header class="major">
+          <h2>
+            Profile
+          </h2>
+        </header>
+        <p>
+          サーバサイドの領域を得意とし、PHPでのWEBアプリケーション開発経験が豊富。加えてフロントエンド、インフラの一通りの構築が可能。<br />
+          また、スクラムを用いたアジャイル開発にも取り組んでおり、スクラムマスターとしてWEBアプリケーションの開発に奮闘中。<br />
+          最近の一番の関心ごとは「変更に強いソフトウェア」にするための開発、チームビルディング。
+        </p>
+      </section>
+
+      <!-- Two -->
+      <section id="two">
+        <h2>Main Skills</h2>
+        <div class="row">
+          <div class="col-12">
+            <ul class="skills">
+              <li class="skill">
+                <span class="bar percent_80"></span>
+                <p class="name">CakePHP2系</p>
+              </li>
+              <li class="skill">
+                <span class="bar percent_70"></span>
+                <p class="name">Laravel</p>
+              </li>
+              <li class="skill">
+                <span class="bar percent_40"></span>
+                <p class="name">Vue.js / Nuxt.js</p>
+              </li>
+              <li class="skill">
+                <span class="bar percent_80"></span>
+                <p class="name">AWS</p>
+              </li>
+              <li class="skill">
+                <span class="bar percent_60"></span>
+                <p class="name">スクラムマスター</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Certificate</h2>
+        <ul>
+          <li>Scrum Inc.認定スクラムマスター（LSM）</li>
+          <li>応用情報技術者</li>
+          <li>日商簿記2級</li>
+        </ul>
+      </section>
+
+      <!-- Three -->
+      <section id="three">
+        <h2>Contact me</h2>
+        <p>
+          TwitterのDMからご連絡ください。<br />
+          <a href="https://twitter.com/okagaway" class="icon brands fa-twitter"
+            >@okagaway<span class="label">Twitter</span></a
+          >
+        </p>
+      </section>
     </div>
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <ul class="icons">
+          <li>
+            <a
+              href="https://twitter.com/okagaway"
+              class="icon brands fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a href="" class="icon brands fa-github"
+              ><span class="label">Github</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </footer>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
+export default {}
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.skills {
+  list-style: none;
+  padding: 0;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.skills .skill {
+  height: 30px;
+  margin-bottom: 20px;
+  background-color: #efefef;
+  position: relative;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.skill .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  display: inline-block;
+  background-color: #ab9e96;
 }
 
-.links {
-  padding-top: 15px;
+.skill .name {
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.bar.percent_40 {
+  width: 40%;
+}
+
+.bar.percent_50 {
+  width: 50%;
+}
+
+.bar.percent_60 {
+  width: 60%;
+}
+
+.bar.percent_70 {
+  width: 70%;
+}
+
+.bar.percent_80 {
+  width: 80%;
 }
 </style>
