@@ -92,7 +92,7 @@
             >
           </li>
           <li>
-            <a href="" class="icon brands fa-github"
+            <a href="https://github.com/y-okagawa" class="icon brands fa-github"
               ><span class="label">Github</span></a
             >
           </li>
