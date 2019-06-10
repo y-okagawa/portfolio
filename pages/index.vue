@@ -7,8 +7,8 @@
           ><img src="~/assets/images/avatar.png" alt=""
         /></a>
         <h1>
-          <strong>I am Yuya Okagawa</strong><br />
-          , I work as an Web Development Engineer.
+          <strong>I am Yuya Okagawa.</strong><br />
+          I work as an Web Development Engineer.
         </h1>
       </div>
     </header>
