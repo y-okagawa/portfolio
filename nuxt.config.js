@@ -43,13 +43,20 @@ export default {
         pageTracking: true,
         dev: false
       }
-    ]
+    ],
+    '@nuxtjs/sitemap'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  sitemap: {
+    hostname: 'https://portfolio.okagawa.dev',
+    gzip: true,
+    exclude: [],
+    routes: []
+  },
   /*
    ** Build configuration
    */
