@@ -109,52 +109,38 @@
 export default {}
 </script>
 
-<style>
+<style lang="scss">
 .skills {
   list-style: none;
   padding: 0;
-}
 
-.skills .skill {
-  height: 30px;
-  margin-bottom: 20px;
-  background-color: #efefef;
-  position: relative;
-}
+  .skill {
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: #efefef;
+    position: relative;
 
-.skill .bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 30px;
-  display: inline-block;
-  background-color: #ab9e96;
-}
+    .bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 30px;
+      display: inline-block;
+      background-color: #ab9e96;
+      $rate: 10;
+      @for $i from 1 through 10 {
+        &.percent_#{$rate*$i} {
+          width: #{1% * $rate * $i};
+        }
+      }
+    }
 
-.skill .name {
-  position: absolute;
-  left: 0;
-  color: #ffffff;
-  margin-left: 10px;
-}
-
-.bar.percent_40 {
-  width: 40%;
-}
-
-.bar.percent_50 {
-  width: 50%;
-}
-
-.bar.percent_60 {
-  width: 60%;
-}
-
-.bar.percent_70 {
-  width: 70%;
-}
-
-.bar.percent_80 {
-  width: 80%;
+    .name {
+      position: absolute;
+      left: 0;
+      color: #ffffff;
+      margin-left: 10px;
+    }
+  }
 }
 </style>
