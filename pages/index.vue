@@ -60,6 +60,18 @@
         </div>
       </section>
 
+      <!-- blog -->
+      <section id="blog">
+        <h2>blog</h2>
+        <div class="row blogs">
+          <article class="col-6 col-12-xsmall blog">
+            <a class="title fit" style="cursor: pointer; outline: 0px;">
+              hoge
+            </a>
+          </article>
+        </div>
+      </section>
+
       <section>
         <h2>Certificate</h2>
         <ul>
@@ -109,7 +121,76 @@
 export default {}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import '~assets/sass/libs/_vendor.scss';
+.blog {
+  margin: 0 0 2em 0;
+  display: inline-grid;
+  .title {
+    border-radius: _size(border-radius);
+    border: 0;
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      @include vendor(
+        'transition',
+        'opacity #{_duration(transition)} ease-in-out'
+      );
+      background: url('~assets/images/overlay.png');
+      border-radius: _size(border-radius);
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &.thumb {
+      text-align: center;
+
+      &:after {
+        @include vendor(
+          'transition',
+          'opacity #{_duration(transition)} ease-in-out'
+        );
+        border-radius: _size(border-radius);
+        border: solid 3px rgba(255, 255, 255, 0.5);
+        color: #fff;
+        content: 'View';
+        display: inline-block;
+        font-size: 0.8em;
+        font-weight: _font(weight-bold);
+        left: 50%;
+        line-height: 2.25em;
+        margin: -1.25em 0 0 -3em;
+        opacity: 0;
+        padding: 0 1.5em;
+        position: absolute;
+        text-align: center;
+        text-decoration: none;
+        top: 50%;
+        white-space: nowrap;
+      }
+
+      &:hover {
+        &:after {
+          opacity: 1;
+        }
+
+        &:before {
+          background: url('~assets/images/overlay.png'),
+            url('~assets/images/overlay.png');
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
 .skills {
   list-style: none;
   padding: 0;
